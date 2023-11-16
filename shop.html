@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+</head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,300&display=swap');
+    body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+header {
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.logo img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+}
+
+.search-container {
+    text-align: center;
+    margin: 100px auto;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#search-input {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#search-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-left: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#search-button:hover {
+    background-color: #0056b3;
+}
+
+
+li a {
+    text-decoration: none;
+    color: white;
+    background-color: #333;
+    padding: 7px;
+    margin-left: 5px;
+}
+
+
+
+li a:hover {
+    color: #ff5500;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 50px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.price {
+    font-weight: 100;
+    margin: 10px 0;
+}
+
+.product {
+    text-align: center;
+    margin: 20px;
+    padding: 10px;
+    background-color: #f5f5f5;
+    width: 250px;
+    display: inline-block;
+    margin-left: 70px;
+}
+
+.product-image img {
+   max-width: 100%;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff5500;
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-info,
+.footer-nav,
+.social-media,
+.copyright {
+    flex: 1;
+    text-align: center;
+}
+
+.contact-info h3,
+.footer-nav h3,
+.social-media h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.contact-info p,
+.footer-nav ul,
+.footer-nav li,
+.social-media a,
+.copyright {
+    font-size: 16px;
+    margin: 5px 0;
+    color: #ff5500;
+}
+
+.footer-nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-nav li {
+    margin: 10px 0;
+}
+.social-icon {
+    display: block;
+    font-size: 24px;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+    padding: 5px;
+}
+
+.social-icon:hover {
+    color: #007bff;
+}
+
+
+.footer-nav a {
+    text-decoration: none;
+    color: #ff5500;
+}
+
+.footer-nav a:hover {
+    color: #007bff;
+}
+
+
+</style>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/IMG-1549 (1).png" alt="Wardrobe Logo">
+        </div>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search for brand,color,etc.">
+            <button id="search-button">Search</button>
+        </div>
+        <nav>
+            <ul>
+                
+                <li><a href="#">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="product">
+        <div class="product-image">
+            <img src="images/Air-Jordan-1-University-Blue-right (1).jpg" alt="Air Jordan 1">
+        </div>
+        <h2>Air Jordan 1</h2>
+        <p class="price">$180</p>
+        <button>Add to Cart</button>
+    </div>
+    <div class="product">
+        <div class="product-image">
+        <img src="images/najki.jfif" alt="Air Force 1">
+    </div>
+    <h2>Air Force 1</h2>
+    <p class="price">$120</p>
+    <button>ADD to Cart</button>
+    </div>
+    <div class="product">
+        <div class="product-image">
+            <img src="images/nikedunk.jfif" alt="Nike Dunk">
+        </div>
+        <h2>Nike Dunk</h2>
+        <p class="price">$140</p>
+        <button>ADD to Cart</button>
+    </div>
+    <div class="product">
+        <div class="product-image1">
+            <img src="images/uptempo.jpg" alt="Nike Uptempo" width="200px">
+        </div>
+        <h2>Nike Uptempo</h2>
+        <p class="price">$140</p>
+        <button>ADD to Cart</button>
+    </div>
+    <div class="product">
+        <div class="product-image">
+            <img src="images/yeezy (1).jpg" alt="Yeezy">
+        </div>
+        <h2>Adidas Yeezy 500</h2>
+        <p class="price">$300</p>
+        <button>ADD to Cart</button>
+    </div>
+    <div class="product">
+        <div class="product-image">
+            <img src="images/dior2.jpg" alt="Dior Shoes">
+        </div>
+        <h2>Christian Dior</h2>
+        <p class="price">$600</p>
+        <button>ADD to Cart</button>
+    </div>
+    <div class="product">
+        <div class="product-image">
+            <img src="images/lv (1).jpg" alt="Louiss Vuitton">
+        </div>
+        <h2>Louiss Vuitton</h2>
+        <p class="price">$1.100</p>
+        <button>ADD to Cart</button>
+    </div>
+    <div class="product">
+        <div class="product-image">
+            <img src="images/yeezyboost.jfif" alt="Yeezy Boost">
+        </div>
+        <h2>Yezzy Boost 350</h2>
+        <p class="price">$350</p>
+        <button>ADD to Cart</button>
+    </div>
+    <div class="product">
+    <div class="product-image">
+        <img src="images/airforce2.jfif" alt="Air Force 1">
+    </div>
+    <h2>Air Force 1</h2>
+    <p class="price">$120</p>
+    <button>ADD to Cart</button>
+    </div>
+    <div class="product">
+    <div class="product-image">
+        <img src="images/airjordan2.jfif" alt="Air Jordan 1">
+    </div>
+    <h2>Air Jordan 1</h2>
+    <p class="price">$180</p>
+    <button>ADD to Cart</button>
+    </div>
+    <div class="product">
+    <div class="product-image">
+        <img src="images/lowshoe.jfif" alt="low shoes">
+    </div>
+    <h2>Air Jordan 1 Low </h2>
+    <p class="price">$160</p>
+    <button>ADD to Cart</button>
+    </div>
+    <div class="product">
+    <div class="product-image">
+        <img src="images/airjooordan3.jfif" alt="Air Jordan 1">
+    </div>
+    <h2>Air Jordan 1</h2>
+    <p class="price">$160</p>
+    <button>ADD to Cart</button>
+    </div>
+    <div class="product">
+    <div class="product-image">
+        <img src="c:\Users\Zahlinjoo\Downloads\jordan3.jfif" alt="Air Jordan">
+    </div>
+    <h2>Air Jordan 3</h2>
+    <p class="price">$400</p>
+    <button>ADD to Cart</button>
+    </div>
+    <div class="product">
+    <div class="product-image">
+        <img src="images/airjordan4.jfif" alt="Air Jordan 1">
+    </div>
+    <h2>Air Jordan 1</h2>
+    <p class="price">$180</p>
+    <button>ADD to Cart</button>
+    </div>
+    <div class="product">
+    <div class="product-image">
+        <img src="images/zaza.jfif" alt="Air Jordan 4">
+    </div>
+    <h2>Air Jordan 4</h2>
+    <p class="price">$140</p>
+    <button>ADD to Cart</button>
+    </div>
+    <div class="product">
+    <div class="product-image">
+        <img src="images/offwhite.jfif" alt="OFF-White">
+       </div>
+       <h2>OFF WHITE </h2>
+       <p class="price">$350</p>
+       <button>ADD to Cart</button>
+    </div>
+    <footer>
+    <div class="contact-info">
+        <h3>Contact Us</h3>
+        <p>Email: thewardrobe@gmail.com</p>
+        <p>Phone: +381638928523</p>
+        <p>Address: Rruga e Kosoves</p>
+    </div>
+    <div class="footer-nav">
+        <h3>Quick Links</h3>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+    <div class="social-media">
+        <h3>Follow Us</h3>
+        <a href="#" class="social-icon">Facebook</a>
+        <a href="#" class="social-icon">Tiktok</a>
+        <a href="#" class="social-icon">Instagram</a>
+    </div>
+    <div class="copyright">
+        &copy; 2023 The Wardrobe
+    </div>
+  </footer>
+    
+</body>
+</html>
+    
+       
+    
+
+
