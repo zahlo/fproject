@@ -1,0 +1,489 @@
+/* Reset some default styles */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* ... Stilet ekzistuese ... */
+.stars .bi-star-fill {
+    color: #ffd700; /* Ngjyra e artë për yjet e mbushura */
+}
+
+
+
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.brand {
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: 600;
+    color: #333;
+}
+
+.material-icons-outlined {
+    font-size: 24px;
+    vertical-align: middle;
+}
+
+main, .bar-bottom {
+    display: grid;
+    grid-template-columns: 2fr 3fr 2fr;
+    justify-content: space-between;
+    align-items: center;
+    grid-gap: 1.5em;
+}
+
+#cart-icon {
+    color: #000;
+    text-decoration: none;
+}
+
+main {
+    min-height: 75vh;
+    padding: 20px;
+}
+
+/* Product details section */
+main > div {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.title {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.titleText {
+    display: block;
+    background: #333;
+    color: #fff;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.titleOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+    transition: 0.3s ease;
+    width: 100%;
+    height: 100%;
+    transform: scaleX(0);
+    transform-origin: top left;
+}
+
+.description {
+    margin-bottom: 20px;
+}
+
+.thumbs img {
+    width: 3em;
+    height: 3em;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.thumbs .thumbs-active {
+    border: 3px #ccc solid;
+}
+
+.showcase {
+    flex: 1;
+}
+
+.showcase img {
+    width: 100%;
+    transform-origin: bottom;
+}
+
+.showcase > div {
+    position: relative;
+    height: 100%;
+}
+
+.options {
+    flex-basis: 200px;
+}
+.shadow {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 1em;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    filter: blur(3px);
+    z-index: 0;
+}
+
+/* Sizes, Reviews, Pricing, Colors */
+.sizes,
+.reviews,
+.pricing,
+.colors {
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.cart-notification {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+
+.sizes li {
+    list-style: none;
+    width: 3.2em;
+    height: 3.2em;
+    border: 1px #111 solid;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 3.2em;
+    font-size: 0.8em;
+    transition: 0.3s;
+}
+
+.sizes li.size-active,
+.colors li.color-active {
+    background-color: #111;
+    color: #fff;
+}
+
+.reviews, .pricing {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pricing .price {
+    color: #111;
+}
+
+.reviews h4, .pricing h4 {
+    color: #ccc;
+}
+
+.reviews .stars li {
+    margin: 0;
+    cursor: default;
+}
+
+
+.options {
+    justify-self: end;
+}
+
+.options ul li {
+    display: inline-block;
+    margin: 0 0.2em;
+    cursor: pointer;
+}
+
+.options ul li:first-child {
+    margin-left: 0;
+}
+
+.colors li {
+    width: 2em;
+    height: 2em;
+    background: red;
+    border-radius: 50%;
+    border: 3px #f6f6f6 solid;
+}
+
+.colors .color-active {
+    border-color: #111;
+}
+
+/* Bottom bar section */
+.bar-bottom {
+    background: #fff;
+    padding: 1.5em;
+}
+
+.bar-bottom div, .bar-bottom a {
+    display: flex;
+    align-items: center;
+}
+
+.bar-bottom a {
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.bar-bottom span {
+    cursor: pointer;
+}
+
+.controls {
+    justify-content: space-evenly;
+}
+
+.arrows span {
+    font-size: 2.5em;
+}
+
+.pagination {
+    display: flex;
+    margin: 0 0.5em;
+}
+
+.pag {
+    background: #ccc;
+    width: 3em;
+    height: 0.2em;
+    margin: 0 7px;
+    transition: 0.3s;
+}
+
+.pag-active {
+    background: #111;
+}
+
+.arr-left {
+    transform: rotate(180deg);
+}
+
+.cart {
+    justify-self: center;
+}
+
+.cart button {
+    background: #111;
+    color: #fff;
+    border: none;
+    padding: 1.3em 2em;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    margin-right: 1.5em;
+    transition: 0.3s;
+}
+.cart-notification {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.cart button:hover {
+    background: #000;
+}
+
+/* ... (your existing CSS code) ... */
+
+/* Add animations */
+@keyframes jump {
+    40% {
+        transform: translateY(-8em) rotate(10deg);
+    }
+    70% {
+        transform: translateY(-8em) rotate(0);
+    }
+    85% {
+        transform: translateY(0) rotate(0deg);
+    }
+    87% {
+        transform: scaleY(0.8);
+    }
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+@keyframes shadow {
+    50% {
+        transform: translateX(-50%) scaleX(0.8);
+    }
+    100% {
+        transform: translateX(-50%) scaleX(1);
+    }
+}
+
+@keyframes shadow2 {
+    50% {
+        width: 0;
+        transform: translateX(-50%);
+    }
+    100% {
+        width: 100%;
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes title {
+    0% {
+        transform: scaleX(0);
+        transform-origin: top left;
+    }
+    30% {
+        transform: scaleX(1);
+        transform-origin: top left;
+    }
+    60% {
+        transform: scaleX(1);
+        transform-origin: top right;
+    }
+    100% {
+        transform: scaleX(0);
+        transform-origin: top right;
+    }
+}
+
+@keyframes replace {
+    5% {
+        transform: scaleY(0.8);
+    }
+    10% {
+        transform: scaleY(1);
+    }
+    40% {
+        transform: translateY(-100vh);
+    }
+    60% {
+        transform: translateY(-100vh);
+    }
+    85% {
+        transform: translateY(0);
+    }
+    90% {
+        transform: scale(0.8);
+    }
+    100% {
+        transform: scaleY(1);
+    }
+}
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes scaleUp {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes colorChange {
+    0% {
+        background-color: #333;
+        color: #fff;
+    }
+    50% {
+        background-color: #fff;
+        color: #333;
+    }
+    100% {
+        background-color: #333;
+        color: #fff;
+    }
+}
+
+/* Apply additional animations to specific elements */
+.thumbs img {
+    animation: scaleUp 0.5s ease-in-out alternate;
+}
+
+.showcase img {
+    animation: spin 1s linear infinite;
+}
+
+.colors li {
+    animation: colorChange 2s ease-in-out infinite;
+}
+
+
+/* Apply animations to specific elements */
+.titleText {
+    animation: fade 1s ease-in-out;
+}
+
+.titleOverlay {
+    animation: title 2s ease-in-out;
+}
+
+.shadow {
+    animation: shadow 1s ease-in-out;
+}
+
+.showcase img {
+    animation: jump 2s ease-in-out;
+}
+
+/* ... (your existing CSS code) ... */
+
+
+/* Responsive adjustments */
+@media screen and (min-width: 1250px) {
+    .title {
+        font-size: 2.5em;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    main, .bar-bottom {
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+        max-width: 700px;
+    }
+
+    .options {
+        justify-self: start;
+        width: 100%;
+    }
+
+    .controls {
+        flex-direction: column;
+    }
+
+    .controls div {
+        margin: 1em 0;
+    }
+}
