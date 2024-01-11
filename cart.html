@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart</title>
+  <style>
+    body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.cart-container {
+  width: 80%;
+  margin: 50px auto;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.listCart {
+  margin-top: 20px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding: 10px 0;
+}
+
+.item img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.name, .totalPrice, .quantity {
+  flex-grow: 1;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+}
+
+.quantity span {
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.cart-footer {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.total-info p {
+  margin: 0;
+  font-weight: bold;
+}
+
+.cart-buttons button {
+  padding: 10px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cart-buttons button:hover {
+  background-color: #45a049;
+}
+
+.close {
+  background-color: #ccc;
+  color: #333;
+}
+
+.close:hover {
+  background-color: #bbb;
+}
+
+  </style>
+</head>
+<body>
+  <div class="cart-container">
+    <h1>Shopping Cart</h1>
+    <div class="listCart" id="listCart">
+    </div>
+    <div class="cart-footer">
+      <div class="total-info">
+        <p>Total Items: <span class="totalItems">0</span></p>
+        <p>Total Price: <span class="totalPrice">$0.00</span></p>
+      </div>
+      <div class="cart-buttons">
+        <button class="close">Close</button>
+        <button class="checkOut">Check Out</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+     document.addEventListener("DOMContentLoaded", function () {
+    const listCart = document.getElementById("listCart");
+    const totalItemsElement = document.querySelector(".totalItems");
+    const totalPriceElement = document.querySelector(".totalPrice");
+
+    let totalItems = 0;
+    let totalPrice = 0;
+
+    // Function to add an item to the cart
+    function addItemToCart(item) {
+      // Update total items and total price
+      totalItems++;
+      totalPrice += item.price;
+
+      // Update HTML elements
+      totalItemsElement.textContent = totalItems;
+      totalPriceElement.textContent = `$${totalPrice.toFixed(2)}`;
+
+      // Create and append the item HTML
+      const newItem = document.createElement("div");
+      newItem.className = "item";
+      newItem.innerHTML = `
+        <img src="${item.image}" alt="${item.name}">
+        <div class="name">${item.name}</div>
+        <div class="quantity">
+          <span onclick="updateQuantity(this, -1)">-</span>
+          ${item.quantity}
+          <span onclick="updateQuantity(this, 1)">+</span>
+        </div>
+        <div class="totalPrice">$${item.price.toFixed(2)}</div>
+      `;
+      listCart.appendChild(newItem);
+    }
+
+    function closeCart() {
+      const cartContainer = document.querySelector(".cart-container");
+      cartContainer.style.display = "none";
+    }
+
+    // Function to update the quantity of an item in the cart
+    function updateQuantity(element, change, item) {
+      const quantityElement = element.parentElement.querySelector(".quantity");
+      const currentQuantity = parseInt(quantityElement.textContent);
+      const newQuantity = currentQuantity + change;
+
+      if (newQuantity >= 0) {
+        quantityElement.textContent = newQuantity;
+
+        // Update total items and total price accordingly
+        totalItems += change;
+        totalPrice += change * item.price;
+
+        totalItemsElement.textContent = totalItems;
+        totalPriceElement.textContent = `$${totalPrice.toFixed(2)}`;
+      }
+    }
+
+    // Example item object (replace this with your actual data)
+    const exampleItem = {
+      name: "Air Force 1",
+      image: "images/pexels-deybson-mallony-9537431.jpg",
+      quantity: 1,
+      price: 71.00,
+    };
+
+    // Example: Add the example item to the cart
+    addItemToCart(exampleItem);
+
+
+    // Example: Checkout button functionality (replace with your actual logic)
+    const checkoutButton = document.querySelector(".checkOut");
+    checkoutButton.addEventListener("click", function () {
+      alert("Thank you for your purchase! Your order has been processed.");
+      // Add logic to handle the checkout process
+    });
+
+    // Example: Close button functionality
+    const closeButton = document.querySelector(".close");
+    closeButton.addEventListener("click", closeCart);
+  });
+  </script>
+</body>
+</html>
