@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Agbalumo&family=DM+Sans:opsz,wght@9..40,200&family=Exo+2:wght@100&family=Open+Sans:ital,wght@0,500;0,800;1,500&family=Roboto+Condensed:ital,wght@1,300&family=Roboto:wght@100;500&family=Titillium+Web:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>The Wardrobe</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="#"><img src="images/IMG-1549 (1).png" alt="Wardrobe Logo"></a>
+        </div>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search for brand,color,etc." oninput="filterAndScroll()">
+            <button id="search-button">Search</button>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#aboutus">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="cart.html"><i id="cart-icon" class="bi bi-bag"></i><span id="cart-count">0</span></a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/1681910421-best-sneaker-stores-new-york-2.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="images/hermes-rivera-OX_en7CXMj4-unsplash.jpg" class="d-block w-100 " alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="images/sale.jpeg" class="d-block w-100 " alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+     
+      <section id="shop">
+    <div class="container">
+        <div class="row">
+            <div class="col-4 box2">
+                <h4>SHOES</h4>
+                <img class="imga" src="images/jordan-max-aura-3-mens-shoes-lqz9jG (1) drejt.jfif">
+                <button type="button" class="btn btn-outline-primary custom-btn"><a href="shop.html">SHOP NOW</a></button>
+            </div>
+            <div class="col-4 box2">
+                <h4>SHOES</h4>
+                <img src="images/pexels-mnz-1598505.jpg">
+                <button type="button" class="btn btn-outline-success custom-btn"><a href="shop.html">SHOP NOW</a></button>
+            </div>
+            <div class="col-4 box2">
+                <h4>SHOES</h4>
+                <img src="images/pexels-ox-street-5710081.jpg">
+                <button type="button" class="btn btn-outline-warning custom-btn"><a href="shop.html">SHOP NOW</a></button>
+            </div>
+        </div>
+    </div>
+  </section>
+    <section id="aboutus">
+      <div class="container">
+        <div class="imazhi">
+          <img src="images/lui.jpg">
+        </div>
+      </div>
+      <div class="aboutus">
+        <h3><span>About Us</span></h3>
+        <h1>Simplicity meets Style</h1>
+        <p>At The Wardrobe, we believe that great style shouldn't be complicated. Our sleek and modern design, combined with a minimal
+          color palette, provides a clean and streaamlined shopping experience. Browse our collection of footwear, from the latest
+          trends to timeles classics, all with ease and simplicity.
+        </p>
+        <div class="linku">
+          <a href="#">READ MORE</a>
+        </div>
+      </div>
+    </section>
+    <section id="intro" class="bg-gray">
+      <div class="container">
+        <div class="title">
+          <h1>Why choose The Wardrobe ?</h1>
+          <p>At the Wardrobe , we strive to exceed our customers'expectaions.From our easy-to-navigate website to our vast selection
+            of footwear,we're committed to providing an exceptional shopping experience. Discover our top benefits below.
+          </p>
+        </div>
+        <div class="grid-container">
+        <div class="intro">
+          <h3><span>01.</span></h3>
+          <h2>Unbeatable Selection</h2>
+          <p>From trendy new releases to classic styles, our selection offers something for everyone.</p>
+        </div>
+        <div class="intro">
+          <h3><span>02.</span></h3>
+          <h2>Quality Footwear</h2>
+          <p>We only offer high-quality footwear to ensure our customers receive the best of the best.</p>
+        </div>
+        <div class="intro">
+          <h3><span>03.</span></h3>
+          <h2>Easy ordering</h2>
+          <p>Our streamlined ordering process ensurses customers can easily purchase their favorite footwear with only a few clicks.</p>
+        </div>
+        <div class="intro">
+          <h3><span>04.</span></h3>
+          <h2>Fast Shipping</h2>
+          <p>We offer fast shipping to ensure customers receive their footwear as quickly as possible</p>
+        </div>
+      </div>
+    </div>
+  </section>
+ <div class="container-fluid">
+  <h1>Our Customers speak for us</h1>
+  <div class="testimonial-section">
+    <div class="testimonial">
+      <p>"I love shopping at The Wardrobe. The selection is unbeatable, and the ordering process is so easy!"</p>
+      <img src="images/custoemer1.jpg" alt="Customer 1">
+      <p class="customers-name"><span id="emri">JULIA KEYS</span></p>
+    </div>
+
+    <div class="testimonial">
+      <p>"The Wardrobe offers high-quality footwear at an affortable price. I'll definitely be shopping here again."</p>
+      <img src="images/customer2.jfif" alt="Customer 2">
+      <p class="customers-name"><span id="emri">LUIS ADRIAN</span></p>
+    </div>
+
+    <div class="testimonial">
+      <p>"Fast shipping and exeptional customer service. The Wardrobe is my go-to for all my footwear needs."</p>
+      <img src="images/customer3.jfif" alt="Customer 3">
+      <p class="customers-name"><span id="emri">MARIA ANNA</span></p>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="titlee">
+      <h1>Sale</h1>
+    </div>
+        <div class="col-4 box2">
+            <img src="images/shoes-6336173_1280.jpg">
+            <h4>AIR JORDAN</h4>
+            <del>$110.00</del><p>$71.00</p>
+            <div class="number-button">
+              <div class="minus" onclick="updateNumber(this, -1)">-</div>
+              <div class="number" data-id="displayNumber">0</div>
+              <div class="plus" onclick="updateNumber(this, 1)">+</div>
+          </div>
+            <button type="button" class="btn btn-outline-success"onclick="addToCart('AIR JORDAN', 71.00, getQuantity(this))">ADD TO CART</button>
+        </div>
+        <div class="col-4 box2">
+            <img src="images/joshua-diaz-48EIci5oOhk-unsplash (1).jpg">
+            <h4>DUNKS</h4>
+            <del>$110.00</del><p>$71.00</p>
+            <div class="number-button">
+              <div class="minus" onclick="updateNumber(this, -1)">-</div>
+              <div class="number" data-id="displayNumber">0</div>
+              <div class="plus" onclick="updateNumber(this, 1)">+</div>
+          </div>
+            <button type="button" class="btn btn-outline-success" onclick="addToCart('DUNKS', 71.00, getQuantity(this))" >ADD TO CART</button>
+        </div>
+      <div class="col-4 box2">
+          <img src="images/pexels-deybson-mallony-9537431.jpg">
+          <h4>AIR FORCE</h4>
+          <del>$110.00</del><p>$71.00</p>
+          <div class="number-button">
+            <div class="minus" onclick="updateNumber(this, -1)">-</div>
+            <div class="number" data-id="displayNumber">0</div>
+            <div class="plus" onclick="updateNumber(this, 1)">+</div>
+        </div>
+          <button type="button" class="btn btn-outline-success" onclick="addToCart('AIR FORCE', 71.00, getQuantity(this))">ADD TO CART</button>
+      </div>
+  </div>
+</div>
+<section id="paper" class="bg-gray">
+  <div class="container">
+    <div class="paper">
+      <p>At The Wardrobe, we're committed to reducing our environmental impact. From eco-friendly packaging to sustainable manufacturing
+        practices, we're doing our part to make a positive change. Shop with us and make a difference.
+      </p>
+      <img src="images/paketimi.jpg" alt="Paketimi">
+    </div>
+  </div>
+</section>
+<section id="contact">
+  <footer>
+      <div class="container">
+          <div class="footer-content">
+              <div class="footer-text">
+                  <h3>The Wardrobe</h3>
+                  <p>Stay up to date with the latest news and offers from The Wardrobe. Follow us on social media and join our 
+                    community of Footwear enthusiasts.
+                  </p>
+                  <div class="footer-icons">
+                    <a href="https://www.instagram.com/" target="_blank"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.tiktok.com/explore" target="_blank"><i class="bi bi-tiktok"></i></a>
+                    <a href="https://www.facebook.com/" target="_blank"><i class="bi bi-facebook"></i></a>
+                    <a href="https://twitter.com/" target="_blank"><i class="bi bi-twitter-x"></i></a>
+                  </div>
+                </div>
+              <div class="footer-text">
+                <h3>Shop</h3>
+                <p><a href="#">Air Jordan 1</a></p>
+                <p><a href="#">Air Force</a></p>
+                <p><a href="#">Dunk</a></p>
+            </div>
+            <div class="footer-text">
+              <h3>About</h3>
+              <p><a href="#">Home</a></p>
+              <p><a href="#shop">Shop</a></p>
+              <p><a href="contact.html">Contact</a></p>
+              <p><a href="#">Cart</a></p>
+          </div>
+          <div class="footer-text">
+            <h3>Need Help ?</h3>
+            <p><a href="shop.html">Shop</a></p>
+            <p><a href="#">My account</a></p>
+            <p><a href="#">Cart</a></p>
+            <p><a href="#">Checkout</a></p>
+        </div>
+      </section>
+
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+    var cartCount = 0;
+    var cartCountElement = document.getElementById('cart-count');
+
+    function addToCart() {
+        // Add your logic to fetch product details if needed
+        // For demonstration purposes, incrementing the count
+        cartCount++;
+        cartCountElement.innerText = cartCount;
+    }
+
+    // Example click event for "Add to Cart" button
+    var addToCartButtons = document.querySelectorAll('.btn-outline-success');
+
+    addToCartButtons.forEach(function(button) {
+        button.addEventListener('click', function () {
+            addToCart();
+        });
+    });
+
+    // Your other functions...
+
+    function updateNumber(button, change) {
+        var numberElement = button.parentNode.querySelector('.number');
+        var currentNumber = parseInt(numberElement.textContent, 10) + change;
+        numberElement.textContent = Math.max(0, currentNumber);
+    }
+});
+
+    function toggleCart() {
+        cartContent.style.display = (cartContent.style.display === 'none' || cartContent.style.display === '') ? 'block' : 'none';
+      }
+        for (let i = 0; i < thumb.length; i++) {
+        thumb[i].addEventListener("click", (e) => {
+        console.log("Thumbnail clicked:", i);
+        id = i + 1;
+        console.log("New image ID:", id);
+        img.src = getImage("showcase", shoe, colorType, id, "jfif");
+        resetActive(thumb, "thumb", i);
+        animate(imgContainer, 550, "fade 500ms ease-in-out");
+            
+      });
+    }
+      
+
+
+        function updateNumber(button, change) {
+            var numberElement = button.parentNode.querySelector('.number');
+            var currentNumber = parseInt(numberElement.textContent, 10) + change;
+            numberElement.textContent = Math.max(0, currentNumber);
+        }
+
+        var shopNowButton = document.getElementById('shopNowButton');
+
+        shopNowButton.addEventListener('click', function () {
+            window.location.href = 'shop.html';
+        });
+
+        // ne search bar fillon scroll
+        function filterProducts(searchValue) {
+    var boxes = document.getElementsByClassName("box2");
+
+    for (var i = 0; i < boxes.length; i++) {
+        var box = boxes[i];
+        var title = box.getElementsByTagName("h4")[0].innerText.toLowerCase();
+
+        if (title.includes(searchValue)) {
+            box.style.display = "block";
+        } else {
+            box.style.display = "none";
+        }
+    }
+}
+
+function filterAndScroll() {
+    var searchValue = document.getElementById("search-input").value.toLowerCase();
+    filterProducts(searchValue);
+}
+
+
+</script>
+</body>
+</html>
